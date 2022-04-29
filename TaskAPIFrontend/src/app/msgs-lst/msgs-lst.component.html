@@ -1,0 +1,14 @@
+<h1 class="h1">Messages</h1>
+<table class="table">
+  <th>Customer</th>
+
+  <tbody>
+    <tr *ngFor="let msg of msgService.Msgs">
+      <td >11</td>
+
+    </tr>
+    <select >
+      <option *ngFor="let msg of msgService.Msgs">{{msg.CustId}}</option>
+    </select>
+  </tbody>
+</table>

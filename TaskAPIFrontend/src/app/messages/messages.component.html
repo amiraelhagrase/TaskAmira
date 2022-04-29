@@ -1,0 +1,15 @@
+<h1 class="h1">Messages : </h1>
+<Table class="table">
+
+  <th>Customer</th>
+  <th>Msg Subject</th>
+  <th>Status</th>
+  <tbody>
+    <tr *ngFor="let msg of msgService.Msgs">
+        <td> <label>{{msg.CustId}}</label></td>
+        <td>{{ msg.MsgSubject }}</td>
+        <td [ngClass]="{ 'table-danger': msg.status === 'Not Delivered' }">{{ msg.status }}</td>
+
+    </tr>
+  </tbody>
+</Table>

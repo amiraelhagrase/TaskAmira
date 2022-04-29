@@ -1,0 +1,33 @@
+
+<h1 class="h1">Sending SMSs</h1>
+
+<form ngForm="form" (submit)="submit()" class="form-floating" >
+
+
+  <div class="form-group">
+    <label for="MsgSubj" class="form-label">Mesagesubject : </label>
+    <input type="text" name="MsgSubj" class="form-control input-group"  [(ngModel)]="service2.message.MsgSubject">
+  </div>
+  <div class="form-group">
+    <label for="MsgBody" class="form-label">MeesageBody : </label>
+    <textarea type="text" id="form8" name="MsgBody" class="form-control input-group"  [(ngModel)]="service2.message.MsgBody" class="md-textarea form-control" mdbInput  ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="customer" class="form-label">Customers : </label>
+  </div>
+  <table class="table table-striped">
+    <th scope="col">Customer name</th>
+    <th scope="col">Customer Phone</th>
+    <tbody>
+      <tr *ngFor="let item of service.customers">
+          <td>{{ item.custName }}</td>
+          <td>{{ item.custPhone}}</td>
+          <td (click)="select(item.customerId)"><input type="submit" value="send msg" class="from-control btn btn-dark btn-lg"/> </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</form>
