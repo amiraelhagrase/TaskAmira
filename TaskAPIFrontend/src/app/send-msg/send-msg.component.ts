@@ -21,7 +21,7 @@ selectedIDs: number[] = [];
 
   ngOnInit(): void {
     this.service2.getAllMsgs();
-
+    this.service.getAllCustomers();
     this.service2.message={
       CustId : this.varID,
       MsgSubject:" ",
